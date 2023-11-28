@@ -1,0 +1,56 @@
+# encoding: utf-8
+# 2020 R1
+SetScriptVersion(Version="20.1.164")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+favorites1 = EngData.LoadFavoriteItems()
+library1 = EngData.OpenLibrary(
+    Name="Granta Design Sample Materials",
+    Source="Granta_Design_Typical_Materials.xml")
+library2 = EngData.OpenLibrary(
+    Name="General Materials",
+    Source="General_Materials.xml")
+library3 = EngData.OpenLibrary(
+    Name="Geomechanical Materials",
+    Source="GeoMechanical_Materials.xml")
+library4 = EngData.OpenLibrary(
+    Name="Composite Materials",
+    Source="Composite_Materials.xml")
+library5 = EngData.OpenLibrary(
+    Name="General Non-linear Materials",
+    Source="General Materials Non-linear.xml")
+library6 = EngData.OpenLibrary(
+    Name="Explicit Materials",
+    Source="Explicit_Materials.xml")
+library7 = EngData.OpenLibrary(
+    Name="Hyperelastic Materials",
+    Source="Hyperelastic_Materials.xml")
+library8 = EngData.OpenLibrary(
+    Name="Magnetic B-H Curves",
+    Source="Magnetic_B-H_curves_Soft_Materials.xml")
+library9 = EngData.OpenLibrary(
+    Name="Thermal Materials",
+    Source="Thermal_Materials.xml")
+library10 = EngData.OpenLibrary(
+    Name="Fluid Materials",
+    Source="Fluid_Materials.xml")
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath="D:/My Data/Desktop/Engineering/4th Year Project/CAD Files/Analysis/First arm.STEP")
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+model1.Exit()
+model1.Edit()
+model1.Exit()
+system1.Delete()
+system2 = template1.CreateSystem()
+geometry2 = system2.GetContainer(ComponentName="Geometry")
+geometry2.SetFile(FilePath="D:/My Data/Desktop/Engineering/4th Year Project/CAD Files/Analysis/First arm.STEP")
+modelComponent2 = system2.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model2 = system2.GetContainer(ComponentName="Model")
+model2.Edit()
+Save(Overwrite=True)
