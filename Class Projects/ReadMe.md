@@ -2,3 +2,6 @@
 
 
 ![Screenshot from 2023-11-29 18-59-29](https://github.com/expert-amateur/CAD-Files/assets/103503974/12d20a80-c77c-4458-8a4c-2ca0b3ff013c)
+
+
+Gearbox model link:https://wpi0-my.sharepoint.com/:f:/g/personal/tamishra_wpi_edu/EqK7qgQN4FtDspUBy0CeJeYBZ31P2aKFnS2U-fesjmvenA?e=yoJzV4
